@@ -1,0 +1,29 @@
+.atmosphere {
+  display: grid;
+  place-items: center;
+  min-height: min(70svh, 40rem);
+  text-align: center;
+}
+
+.atmosphere__inner {
+  position: relative;
+  z-index: 2;
+  width: var(--content);
+  display: grid;
+  justify-items: center;
+  gap: 1.4rem;
+  padding-block: clamp(4rem, 10vw, 7rem);
+}
+
+.atmosphere__quote {
+  max-width: 26ch;
+  font-size: clamp(1.5rem, 3.6vw, 2.6rem);
+  text-transform: uppercase;
+  line-height: 1.45;
+}
+
+.atmosphere__sub {
+  max-width: 40ch;
+  font-style: italic;
+  color: var(--cream-dim);
+}
