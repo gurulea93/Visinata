@@ -47,7 +47,7 @@ export const GALLERY = [
 export const PRODUCTS = [
   {
     id: 'visina',
-    name: 'Vișinată',
+    name: 'Era odată Vișinată',
     subtitle: 'Licoare de vișină',
     alcohol: '24% vol.',
     volume: '0,5 L',
@@ -56,7 +56,7 @@ export const PRODUCTS = [
     accent: 'ruby' as const,
     notes: 'Vișină coaptă · sâmbure de migdală · vanilie',
     description:
-      'O selecție dintre cele mai bune soiuri de vișină, macerate cu răbdare și atenție la fiecare detaliu. Un gust rotund, cu dulceață măsurată și acel final ușor amărui de sâmbure care o face de neconfundat — exact ca licoarea de altădată, din cămara bunicilor.',
+      'Rețeta vișinatei noastre începe într-un sat din Moldova, unde livezile de vișin umpleau aerul cu arome dulci. După deportarea în Siberia, familia a păstrat vie dorința de a-și continua tradițiile, și, bineînțeles, rețeta acestei băuturi. Transmisă din generație în generație, rețeta se bazează pe două ingrediente secrete, transformând fiecare înghițitură într-un elixir al amintirilor. Astăzi, fiecare sticlă este o punte între generații, un simbol al rezistenței și al dragostei față de rădăcini.',
   },
   {
     id: 'zmeura',
@@ -69,7 +69,7 @@ export const PRODUCTS = [
     accent: 'forest' as const,
     notes: 'Zmeură proaspătă · flori de câmp · miere',
     description:
-      'Zmeură culeasă la coacere deplină, transformată într-o licoare jucăușă și parfumată. Mai lejeră decât sora ei, vișinata, cu o aromă limpede de fruct proaspăt — pentru poveștile care se spun seara, până se face târziu.',
+      'Rețeta noastră își are rădăcinile într-un sat din Moldova, unde zmeura din grădină dăruia arome dulci și parfumate. De-a lungul timpului, familia noastră a păstrat cu grijă dorința de a-și perpetua tradițiile și, desigur, rețeta acestei băuturi deosebite. Transmisă cu grijă din generație în generație, această băutură artizanală transformă fiecare înghițitură într-un elixir al amintirilor și al dragostei pentru tradiții.',
   },
   {
     id: 'portocala',
@@ -82,6 +82,6 @@ export const PRODUCTS = [
     accent: 'citrus' as const,
     notes: 'Portocală coaptă · coajă uscată · soare moldovenesc',
     description:
-      'Ca în cântecul din copilărie — Ala bala portocala — dar în pahar: portocale macerate în răbdare, cu dulceață solară și o notă amară de coajă care trezește pofta. O licoare jucăușă, caldă, perfectă pentru toasturi, deserturi și serile care cer un strop de lumină.',
+      'Rețeta licorii noastre se împletește cu magia unei tradiții vechi, îmbogățită de farmecul fructelor exotice. Însă aceasta a păstrat cu strictețe acele ingrediente secrete, transformând fiecare înghițitură într-un elixir al plăcerii supreme.',
   },
 ] as const

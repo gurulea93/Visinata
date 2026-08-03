@@ -6,10 +6,9 @@ import { Reveal } from './Reveal'
 import './Story.css'
 
 const LINES = [
-  'Povestea noastră începe într-un sat din Moldova, unde livezile umpleau aerul cu arome dulci — de vișină, de zmeură și, mai târziu, de portocală.',
-  'După deportarea în Siberia, familia a păstrat vie dorința de a-și continua tradițiile și, bineînțeles, rețetele acestor băuturi.',
-  'Transmise din generație în generație, rețetele se bazează pe grijă, răbdare și câteva ingrediente secrete — fiecare înghițitură e un elixir al amintirilor.',
-  'Astăzi, fiecare sticlă — Vișinată, Povești cu Zmeu sau Ala Bala Portocala — este o punte între generații și un simbol al dragostei pentru rădăcini.',
+  'Trei rețete, aceeași familie — fiecare sticlă își spune propria poveste.',
+  'Vișină, zmeură și portocală: fructe culese cu grijă, macerate cu răbdare, îmbuteliate artizanal.',
+  'Era odată Vișinată, Povești cu Zmeu și Ala Bala Portocala — tradiție în fiecare picătură.',
 ]
 
 export function Story() {
