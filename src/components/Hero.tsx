@@ -36,7 +36,7 @@ export function Hero() {
           transition={{ duration: 1.3, ease: [0.16, 1, 0.3, 1] }}
         />
         <h1 id="hero-brand" className="sr-only">
-          A fost odată… — licoare artizanale de vișină și zmeură
+          A fost odată… — licoare artizanale de vișină, zmeură și portocală
         </h1>
 
         <motion.div
@@ -53,7 +53,7 @@ export function Hero() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 0.65, ease: [0.16, 1, 0.3, 1] }}
         >
-          Licoare artizanale din Moldova · Vișinată &amp; Povești cu Zmeu
+          Licoare artizanale din Moldova · Vișinată · Zmeu · Portocală
         </motion.p>
 
         <motion.div

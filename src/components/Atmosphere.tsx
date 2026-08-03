@@ -31,8 +31,8 @@ export function Atmosphere() {
         </motion.h2>
         <Ornament />
         <p className="atmosphere__sub">
-          Vișinata și Povești cu Zmeu te invită să redeschizi clipele de altădată, la masa celor
-          dragi.
+          Vișinata, Povești cu Zmeu și Ala Bala Portocala te invită să redeschizi clipele de
+          altădată, la masa celor dragi.
         </p>
       </div>
     </section>

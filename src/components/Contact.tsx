@@ -20,8 +20,8 @@ export function Contact() {
           </h2>
           <Ornament />
           <p className="contact__lead">
-            Scrie-ne pe WhatsApp și îți spunem ce se potrivește mai bine: vișinată sau zmeură,
-            pentru masă sau pentru cadou.
+            Scrie-ne pe WhatsApp și îți spunem ce se potrivește mai bine: vișinată, zmeură sau
+            portocală, pentru masă sau pentru cadou.
           </p>
           <a
             className="btn btn--solid"

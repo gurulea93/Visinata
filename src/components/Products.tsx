@@ -13,6 +13,8 @@ import { Ornament } from './Ornament'
 import { Reveal } from './Reveal'
 import './Products.css'
 
+const EASE_OUT = [0.16, 1, 0.3, 1] as const
+
 export function Products() {
   return (
     <section className="products section" id="gusturi" aria-labelledby="products-title">
@@ -24,14 +26,14 @@ export function Products() {
           </h2>
           <Ornament />
           <p className="section__lead">
-            Două licoare, aceeași mână și aceeași tradiție — alegeți după poveste, nu doar după
+            Trei licoare, aceeași mână și aceeași tradiție — alegeți după poveste, nu doar după
             gust.
           </p>
         </Reveal>
       </div>
 
       {PRODUCTS.map((product, index) => (
-        <ProductRow key={product.id} product={product} flipped={index % 2 === 1} />
+        <ProductRow key={product.id} product={product} flipped={index % 2 === 1} index={index} />
       ))}
     </section>
   )
@@ -39,7 +41,15 @@ export function Products() {
 
 type Product = (typeof PRODUCTS)[number]
 
-function ProductRow({ product, flipped }: { product: Product; flipped: boolean }) {
+function ProductRow({
+  product,
+  flipped,
+  index,
+}: {
+  product: Product
+  flipped: boolean
+  index: number
+}) {
   const ref = useRef<HTMLDivElement>(null)
   const reduce = useReducedMotion()
   const { scrollYProgress } = useScroll({
@@ -47,15 +57,15 @@ function ProductRow({ product, flipped }: { product: Product; flipped: boolean }
     offset: ['start end', 'end start'],
   })
 
-  const sceneY = useTransform(scrollYProgress, [0, 1], ['-8%', '8%'])
-  const bottleY = useTransform(scrollYProgress, [0, 1], [56, -56])
+  const sceneY = useTransform(scrollYProgress, [0, 1], ['-6%', '6%'])
+  const bottleY = useTransform(scrollYProgress, [0, 1], [40, -40])
   const bottleRotate = useTransform(
     scrollYProgress,
     [0, 0.5, 1],
-    flipped ? [6, 0, -5] : [-6, 0, 5],
+    flipped ? [4, 0, -3.5] : [-4, 0, 3.5],
   )
-  const bottleScale = useTransform(scrollYProgress, [0, 0.35, 0.7, 1], [0.92, 1, 1, 0.96])
-  const glowOpacity = useTransform(scrollYProgress, [0, 0.35, 0.7, 1], [0.2, 0.7, 0.7, 0.25])
+  const bottleScale = useTransform(scrollYProgress, [0, 0.35, 0.7, 1], [0.94, 1, 1, 0.97])
+  const glowOpacity = useTransform(scrollYProgress, [0, 0.35, 0.7, 1], [0.15, 0.55, 0.55, 0.2])
 
   return (
     <div
@@ -63,7 +73,10 @@ function ProductRow({ product, flipped }: { product: Product; flipped: boolean }
       ref={ref}
     >
       <div className="product-row__bg" aria-hidden="true">
-        <motion.div className="product-row__scene" style={{ y: sceneY }}>
+        <motion.div
+          className="product-row__scene"
+          style={reduce ? undefined : { y: sceneY }}
+        >
           <img src={product.scene} alt="" loading="lazy" />
         </motion.div>
         <div className="product-row__veil" />
@@ -78,9 +91,10 @@ function ProductRow({ product, flipped }: { product: Product; flipped: boolean }
           bottleScale={bottleScale}
           glowOpacity={glowOpacity}
           flipped={flipped}
+          index={index}
         />
 
-        <Reveal className="product-row__copy">
+        <Reveal className="product-row__copy" delay={0.08}>
           <p className="eyebrow">{product.subtitle}</p>
           <h3 className="product-row__name script">{product.name}</h3>
           <Ornament />
@@ -108,6 +122,7 @@ function BottleStage({
   bottleScale,
   glowOpacity,
   flipped,
+  index,
 }: {
   product: Product
   reduce: boolean
@@ -116,16 +131,17 @@ function BottleStage({
   bottleScale: MotionValue<number>
   glowOpacity: MotionValue<number>
   flipped: boolean
+  index: number
 }) {
   const stageRef = useRef<HTMLDivElement>(null)
-  const mouseX = useSpring(0, { stiffness: 70, damping: 18 })
-  const mouseY = useSpring(0, { stiffness: 70, damping: 18 })
+  const mouseX = useSpring(0, { stiffness: 80, damping: 20, mass: 0.4 })
+  const mouseY = useSpring(0, { stiffness: 80, damping: 20, mass: 0.4 })
 
   const onMove = (e: MouseEvent<HTMLDivElement>) => {
     if (reduce || !stageRef.current) return
     const rect = stageRef.current.getBoundingClientRect()
-    mouseX.set(((e.clientX - rect.left) / rect.width - 0.5) * 28)
-    mouseY.set(((e.clientY - rect.top) / rect.height - 0.5) * 20)
+    mouseX.set(((e.clientX - rect.left) / rect.width - 0.5) * 22)
+    mouseY.set(((e.clientY - rect.top) / rect.height - 0.5) * 14)
   }
 
   const onLeave = () => {
@@ -142,28 +158,24 @@ function BottleStage({
     >
       <motion.div
         className={`product-row__glow product-row__glow--${product.accent}`}
-        style={{ opacity: glowOpacity }}
+        style={reduce ? { opacity: 0.45 } : { opacity: glowOpacity }}
         aria-hidden="true"
-        animate={
-          reduce
-            ? undefined
-            : {
-                scale: [1, 1.14, 1],
-              }
-        }
-        transition={{ duration: 5.5, repeat: Infinity, ease: 'easeInOut' }}
       />
 
       <motion.div
         className="product-row__parallax"
-        style={{ y: bottleY, rotate: bottleRotate, scale: bottleScale, x: mouseX }}
+        style={
+          reduce
+            ? undefined
+            : { y: bottleY, rotate: bottleRotate, scale: bottleScale, x: mouseX }
+        }
       >
         <motion.div
           className="product-row__enter"
-          initial={reduce ? false : { opacity: 0, y: 72, rotate: flipped ? 10 : -10, scale: 0.86 }}
+          initial={reduce ? false : { opacity: 0, y: 56, rotate: flipped ? 8 : -8, scale: 0.9 }}
           whileInView={reduce ? undefined : { opacity: 1, y: 0, rotate: 0, scale: 1 }}
-          viewport={{ once: true, amount: 0.35 }}
-          transition={{ duration: 1.1, ease: [0.16, 1, 0.3, 1] }}
+          viewport={{ once: true, amount: 0.3, margin: '0px 0px -8% 0px' }}
+          transition={{ duration: 0.95, delay: Math.min(index * 0.04, 0.12), ease: EASE_OUT }}
         >
           <motion.div className="product-row__bottle" style={{ y: mouseY }}>
             <motion.img
@@ -176,16 +188,16 @@ function BottleStage({
                 reduce
                   ? undefined
                   : {
-                      y: [0, -12, 0],
-                      rotate: flipped ? [0, -1.6, 0] : [0, 1.6, 0],
+                      y: [0, -7, 0],
+                      rotate: flipped ? [0, -0.9, 0] : [0, 0.9, 0],
                     }
               }
               transition={{
-                duration: 5.4,
+                duration: 6.2,
                 repeat: Infinity,
                 ease: 'easeInOut',
               }}
-              whileHover={reduce ? undefined : { scale: 1.045 }}
+              whileHover={reduce ? undefined : { scale: 1.03 }}
             />
           </motion.div>
         </motion.div>

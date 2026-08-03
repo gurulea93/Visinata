@@ -40,7 +40,7 @@ export const GALLERY = [
     src: MEDIA.harvest,
     alt: 'Culesul din livadă — începutul poveștii',
     title: 'Culesul din livadă',
-    text: 'Vișine și zmeură culese la coacere deplină, din livezi moldovenești, în zilele potrivite.',
+    text: 'Vișine, zmeură și portocale — culese la coacere deplină, în zilele potrivite.',
   },
 ] as const
 
@@ -70,5 +70,18 @@ export const PRODUCTS = [
     notes: 'Zmeură proaspătă · flori de câmp · miere',
     description:
       'Zmeură culeasă la coacere deplină, transformată într-o licoare jucăușă și parfumată. Mai lejeră decât sora ei, vișinata, cu o aromă limpede de fruct proaspăt — pentru poveștile care se spun seara, până se face târziu.',
+  },
+  {
+    id: 'portocala',
+    name: 'Ala Bala Portocala',
+    subtitle: 'Licoare de portocală',
+    alcohol: '20% vol.',
+    volume: '0,5 L',
+    image: '/img/Portocala.png',
+    scene: MEDIA.orchardWide,
+    accent: 'citrus' as const,
+    notes: 'Portocală coaptă · coajă uscată · soare moldovenesc',
+    description:
+      'Ca în cântecul din copilărie — Ala bala portocala — dar în pahar: portocale macerate în răbdare, cu dulceață solară și o notă amară de coajă care trezește pofta. O licoare jucăușă, caldă, perfectă pentru toasturi, deserturi și serile care cer un strop de lumină.',
   },
 ] as const

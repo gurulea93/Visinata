@@ -37,8 +37,8 @@ export function Gift() {
           <Ornament />
           <p>
             Perfectă pentru a sărbători momente speciale, a încânta musafirii sau a oferi un cadou
-            plin de emoție și poveste. Alege Vișinata sau Povești cu Zmeu — fiecare sticlă spune o
-            istorie a rezistenței și a dragostei pentru autentic.
+            plin de emoție și poveste. Alege Vișinata, Povești cu Zmeu sau Ala Bala Portocala —
+            fiecare sticlă spune o istorie a rezistenței și a dragostei pentru autentic.
           </p>
           <ul className="gift__list">
             <li>Ambalaj de sărbătoare</li>

@@ -1,6 +1,6 @@
 # A fost odată…
 
-Site de prezentare pentru licoare artizanală de vișină și zmeură.
+Site de prezentare pentru licoare artizanale: Vișinată, Povești cu Zmeu și Ala Bala Portocala.
 
 ## Dezvoltare
 
@@ -21,5 +21,5 @@ npm run preview
 - `public/img/` — doar fișierele optimizate care ajung în build (fotografii ~100–200 KB, `zmeura-bottle.png`).
 - `media-originals/` — originalele mari (webp/png din telefon), păstrate pentru re-decupări; nu sunt publicate.
 
-Rândurile de produs folosesc `Visina.png` și `Zmeura.png` (PNG cu alpha, calitate înaltă).
+Rândurile de produs folosesc `Visina.png`, `Zmeura.png` și `Portocala.png` (PNG cu alpha).
 Originalele mai vechi rămân în `media-originals/` dacă e nevoie de re-decupare.

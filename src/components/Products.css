@@ -89,6 +89,10 @@
   background: radial-gradient(circle, rgba(101, 163, 13, 0.28), transparent 70%);
 }
 
+.product-row__glow--citrus {
+  background: radial-gradient(circle, rgba(234, 136, 42, 0.42), transparent 70%);
+}
+
 .product-row__parallax {
   position: relative;
   z-index: 1;
