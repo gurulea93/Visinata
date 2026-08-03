@@ -1,5 +1,5 @@
-export const WHATSAPP_URL = 'https://wa.me/373060742224'
-export const WHATSAPP_LABEL = 'Comandă pe WhatsApp'
+export const TELEGRAM_URL = 'https://t.me/+37360742224'
+export const TELEGRAM_LABEL = 'Comandă pe Telegram'
 
 export const SOCIAL = {
   instagram: 'https://www.instagram.com/era_odata_md',
@@ -62,7 +62,7 @@ export const PRODUCTS = [
     id: 'zmeura',
     name: 'Povești cu Zmeu',
     subtitle: 'Licoare de zmeură',
-    alcohol: '20% vol.',
+    alcohol: '24% vol.',
     volume: '0,5 L',
     image: '/img/Zmeura.png',
     scene: MEDIA.orchardPath,
@@ -75,7 +75,7 @@ export const PRODUCTS = [
     id: 'portocala',
     name: 'Ala Bala Portocala',
     subtitle: 'Licoare de portocală',
-    alcohol: '20% vol.',
+    alcohol: '24% vol.',
     volume: '0,5 L',
     image: '/img/Portocala.png',
     scene: MEDIA.orchardWide,

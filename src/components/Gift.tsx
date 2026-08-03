@@ -1,6 +1,6 @@
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { useRef } from 'react'
-import { LEGACY, MEDIA, WHATSAPP_LABEL, WHATSAPP_URL } from '../constants'
+import { LEGACY, MEDIA, TELEGRAM_LABEL, TELEGRAM_URL } from '../constants'
 import { Ornament } from './Ornament'
 import { Reveal } from './Reveal'
 import './Gift.css'
@@ -47,11 +47,11 @@ export function Gift() {
           </ul>
           <a
             className="btn btn--solid"
-            href={WHATSAPP_URL}
+            href={TELEGRAM_URL}
             target="_blank"
             rel="noopener noreferrer"
           >
-            {WHATSAPP_LABEL}
+            {TELEGRAM_LABEL}
           </a>
         </Reveal>
       </div>

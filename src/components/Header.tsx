@@ -1,6 +1,6 @@
 import { AnimatePresence, motion, useMotionValueEvent, useScroll } from 'framer-motion'
 import { useState } from 'react'
-import { LEGACY, WHATSAPP_URL } from '../constants'
+import { LEGACY, TELEGRAM_URL } from '../constants'
 import { Ornament } from './Ornament'
 import './Header.css'
 
@@ -42,7 +42,7 @@ export function Header() {
         <div className="site-header__end">
           <a
             className="site-header__cta"
-            href={WHATSAPP_URL}
+            href={TELEGRAM_URL}
             target="_blank"
             rel="noopener noreferrer"
           >

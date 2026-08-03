@@ -8,7 +8,7 @@ import {
 } from 'framer-motion'
 import type { MouseEvent } from 'react'
 import { useRef } from 'react'
-import { PRODUCTS, WHATSAPP_URL } from '../constants'
+import { PRODUCTS, TELEGRAM_URL } from '../constants'
 import { Ornament } from './Ornament'
 import { Reveal } from './Reveal'
 import './Products.css'
@@ -105,7 +105,7 @@ function ProductRow({
             <span aria-hidden="true">·</span>
             <span>{product.volume}</span>
           </p>
-          <a className="btn" href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+          <a className="btn" href={TELEGRAM_URL} target="_blank" rel="noopener noreferrer">
             Comandă sticla
           </a>
         </Reveal>

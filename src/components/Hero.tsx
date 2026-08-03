@@ -1,6 +1,6 @@
 import { motion, useScroll, useTransform } from 'framer-motion'
 import { useRef } from 'react'
-import { LEGACY, MEDIA, WHATSAPP_URL } from '../constants'
+import { LEGACY, MEDIA, TELEGRAM_URL } from '../constants'
 import { Ornament } from './Ornament'
 import './Hero.css'
 
@@ -65,7 +65,7 @@ export function Hero() {
           <a className="btn" href="#gusturi">
             Descoperă gusturile
           </a>
-          <a className="btn btn--solid" href={WHATSAPP_URL} target="_blank" rel="noopener noreferrer">
+          <a className="btn btn--solid" href={TELEGRAM_URL} target="_blank" rel="noopener noreferrer">
             Comandă
           </a>
         </motion.div>

@@ -1,4 +1,4 @@
-import { SOCIAL, WHATSAPP_LABEL, WHATSAPP_URL } from '../constants'
+import { SOCIAL, TELEGRAM_LABEL, TELEGRAM_URL } from '../constants'
 import { Ornament } from './Ornament'
 import { Reveal } from './Reveal'
 import './Contact.css'
@@ -20,16 +20,16 @@ export function Contact() {
           </h2>
           <Ornament />
           <p className="contact__lead">
-            Scrie-ne pe WhatsApp și îți spunem ce se potrivește mai bine: vișinată, zmeură sau
+            Scrie-ne pe Telegram și îți spunem ce se potrivește mai bine: vișinată, zmeură sau
             portocală, pentru masă sau pentru cadou.
           </p>
           <a
             className="btn btn--solid"
-            href={WHATSAPP_URL}
+            href={TELEGRAM_URL}
             target="_blank"
             rel="noopener noreferrer"
           >
-            {WHATSAPP_LABEL}
+            {TELEGRAM_LABEL}
           </a>
           <ul className="contact__social">
             {SOCIALS.map((item) => (
