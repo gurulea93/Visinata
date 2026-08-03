@@ -2,9 +2,9 @@ export const WHATSAPP_URL = 'https://wa.me/373060742224'
 export const WHATSAPP_LABEL = 'Comandă pe WhatsApp'
 
 export const SOCIAL = {
-  instagram: 'https://www.instagram.com/afostodata.md/',
+  instagram: 'https://www.instagram.com/era_odata_md',
   facebook: 'https://www.facebook.com/profile.php?id=61566851765049',
-  tiktok: 'https://www.tiktok.com/@afostodata.md?_t=8rQLWZtFGBr&_r=1',
+  tiktok: 'https://www.tiktok.com/@eraodata.md',
 } as const
 
 export const AGE_GATE_KEY = 'afostodata-age-ok'
